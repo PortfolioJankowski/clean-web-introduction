@@ -23,7 +23,7 @@ const HeroSection = () => {
   return (
     <section id="o-mnie" className="py-20 lg:py-32">
       <div className="container-max section-padding">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           <div className="animate-fade-in">
             <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
               {t.hero.available}
@@ -40,7 +40,7 @@ const HeroSection = () => {
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">{t.hero.technologies}</h3>
               <div className="flex flex-wrap gap-3">
                 {technologies.map((tech) => (
-                  <Badge key={tech.name} variant="outline" className="px-3 py-2 text-sm">
+                  <Badge key={tech.name} variant="outline" className="px-3 py-2 text-sm border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300">
                     <span className="mr-2">{tech.icon}</span>
                     {tech.name}
                   </Badge>
@@ -60,15 +60,15 @@ const HeroSection = () => {
 
             {/* Social Links */}
             <div className="flex space-x-4">
-              <Button variant="outline" size="sm" className="hover:bg-primary hover:text-white transition-colors">
+              <Button variant="outline" size="sm" className="hover:bg-primary hover:text-white transition-colors border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300">
                 <Github className="w-4 h-4 mr-2" />
                 GitHub
               </Button>
-              <Button variant="outline" size="sm" className="hover:bg-primary hover:text-white transition-colors">
+              <Button variant="outline" size="sm" className="hover:bg-primary hover:text-white transition-colors border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300">
                 <Linkedin className="w-4 h-4 mr-2" />
                 LinkedIn
               </Button>
-              <Button variant="outline" size="sm" className="hover:bg-primary hover:text-white transition-colors">
+              <Button variant="outline" size="sm" className="hover:bg-primary hover:text-white transition-colors border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300">
                 <Mail className="w-4 h-4 mr-2" />
                 jan@example.com
               </Button>
@@ -77,11 +77,11 @@ const HeroSection = () => {
 
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="w-80 h-80 bg-gradient-to-br from-primary to-blue-600 rounded-full p-2">
+              <div className="w-80 h-96 bg-gradient-to-br from-primary to-blue-600 rounded-lg p-2 shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face"
                   alt="Jan Kowalski"
-                  className="w-full h-full rounded-full object-cover"
+                  className="w-full h-full rounded-lg object-cover"
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-lg">

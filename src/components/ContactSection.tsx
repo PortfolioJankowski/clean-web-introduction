@@ -1,76 +1,100 @@
 
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
+import { useAppContext } from '@/contexts/AppContext';
+import { useTranslations } from '@/utils/translations';
 
 const ContactSection = () => {
+  const { language } = useAppContext();
+  const t = useTranslations(language);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission here
+    console.log('Form submitted');
+  };
+
   return (
-    <section id="kontakt" className="py-20 bg-white">
+    <section id="kontakt" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="container-max section-padding">
-        <div className="max-w-2xl mx-auto text-center mb-16">
-          <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
-            Kontakt
-          </Badge>
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-            Masz pytanie? Skontaktuj się ze mną
+        <div className="text-center mb-16">
+          <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            {t.contact.title}
           </h2>
-          <p className="text-xl text-gray-600">
-            Jestem zawsze otwarty na nowe projekty i współpracę. 
-            Napisz do mnie, a odpowiem w ciągu 24 godzin.
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            {t.contact.subtitle}
           </p>
         </div>
 
-        <div className="max-w-2xl mx-auto">
-          <Card className="border-0 shadow-lg">
-            <CardContent className="p-8">
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Imię
-                    </label>
-                    <Input id="name" placeholder="Twoje imię" className="border-gray-200" />
+        <div className="grid lg:grid-cols-2 gap-12">
+          <div>
+            <Card className="border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
+              <CardHeader>
+                <CardTitle className="text-gray-900 dark:text-white">{t.contact.formTitle}</CardTitle>
+                <CardDescription className="text-gray-600 dark:text-gray-300">
+                  {t.contact.formDescription}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <Label htmlFor="name" className="text-gray-700 dark:text-gray-300">{t.contact.form.name}</Label>
+                      <Input id="name" placeholder={t.contact.form.namePlaceholder} className="border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" />
+                    </div>
+                    <div>
+                      <Label htmlFor="email" className="text-gray-700 dark:text-gray-300">{t.contact.form.email}</Label>
+                      <Input id="email" type="email" placeholder={t.contact.form.emailPlaceholder} className="border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" />
+                    </div>
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      E-mail
-                    </label>
-                    <Input id="email" type="email" placeholder="twoj@email.com" className="border-gray-200" />
+                    <Label htmlFor="subject" className="text-gray-700 dark:text-gray-300">{t.contact.form.subject}</Label>
+                    <Input id="subject" placeholder={t.contact.form.subjectPlaceholder} className="border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" />
                   </div>
+                  <div>
+                    <Label htmlFor="message" className="text-gray-700 dark:text-gray-300">{t.contact.form.message}</Label>
+                    <Textarea id="message" placeholder={t.contact.form.messagePlaceholder} rows={5} className="border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" />
+                  </div>
+                  <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white">
+                    {t.contact.form.send}
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">{t.contact.infoTitle}</h3>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Mail className="w-5 h-5 text-primary" />
+                  <span className="text-gray-700 dark:text-gray-300">jan.kowalski@example.com</span>
                 </div>
-                
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                    Temat
-                  </label>
-                  <Input id="subject" placeholder="Temat wiadomości" className="border-gray-200" />
+                <div className="flex items-center space-x-3">
+                  <Phone className="w-5 h-5 text-primary" />
+                  <span className="text-gray-700 dark:text-gray-300">+48 123 456 789</span>
                 </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Wiadomość
-                  </label>
-                  <Textarea 
-                    id="message" 
-                    placeholder="Opisz swój projekt lub zadaj pytanie..." 
-                    className="min-h-32 border-gray-200"
-                  />
+                <div className="flex items-center space-x-3">
+                  <MapPin className="w-5 h-5 text-primary" />
+                  <span className="text-gray-700 dark:text-gray-300">Warszawa, Polska</span>
                 </div>
-                
-                <Button className="w-full bg-primary hover:bg-primary/90 py-3">
-                  Wyślij Wiadomość
-                  <Mail className="w-4 h-4 ml-2" />
-                </Button>
-              </form>
-              
-              <div className="mt-6 pt-6 border-t border-gray-200 text-center text-sm text-gray-500">
-                * Formularz wykorzystuje Formspree do wysyłki e-maili
               </div>
-            </CardContent>
-          </Card>
+            </div>
+
+            <Card className="border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
+              <CardContent className="p-6">
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">{t.contact.responseTime}</h4>
+                <p className="text-gray-600 dark:text-gray-300 text-sm">
+                  {t.contact.responseDescription}
+                </p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     </section>
