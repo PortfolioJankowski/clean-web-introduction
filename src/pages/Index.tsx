@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from 'react';
+import { AppProvider } from '@/contexts/AppContext';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import ProductSection from '@/components/ProductSection';
@@ -7,7 +8,7 @@ import ServicesSection from '@/components/ServicesSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
-const Index = () => {
+const IndexContent = () => {
   const [activeSection, setActiveSection] = useState('o-mnie');
 
   useEffect(() => {
@@ -38,7 +39,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
       <Header activeSection={activeSection} onNavigate={scrollToSection} />
       <HeroSection />
       <ProductSection />
@@ -46,6 +47,14 @@ const Index = () => {
       <ContactSection />
       <Footer />
     </div>
+  );
+};
+
+const Index = () => {
+  return (
+    <AppProvider>
+      <IndexContent />
+    </AppProvider>
   );
 };
 
