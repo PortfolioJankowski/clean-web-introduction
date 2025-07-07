@@ -33,11 +33,11 @@ const ProductSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
-            <div className="bg-gradient-to-br from-primary/10 to-blue-100 dark:from-primary/20 dark:to-blue-900/20 rounded-2xl p-8 shadow-xl">
+            <div className="bg-gradient-to-br from-primary/10 to-blue-100 dark:from-primary/20 dark:to-blue-900/20 rounded-2xl p-1 shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop"
+                src="../../public/ngosik landing.jpg"
                 alt="Product mockup"
-                className="w-full h-80 object-cover rounded-lg shadow-lg"
+                className="w-full h-97 object-cover rounded-lg shadow-lg"
               />
             </div>
             <div className="absolute -top-6 -right-6 bg-primary text-white p-4 rounded-full shadow-lg">
@@ -68,11 +68,8 @@ const ProductSection = () => {
             </Card>
 
             <div className="flex space-x-4">
-              <Button className="bg-primary hover:bg-primary/90 text-white">
+              <Button className="bg-primary hover:bg-primary/90 text-white" onClick={() => window.open('mailto:mat.jankowski99@gmail.com')}>
                 {t.product.learnMore}
-              </Button>
-              <Button variant="outline" className="border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
-                {t.product.tryNow}
               </Button>
             </div>
           </div>

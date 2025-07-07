@@ -10,6 +10,11 @@ const ServicesSection = () => {
 
   const services = [
     {
+      icon: <Users className="w-8 h-8 text-primary" />,
+      title: t.services.implementation.title,
+      description: t.services.implementation.description
+    },
+    {
       icon: <Code className="w-8 h-8 text-primary" />,
       title: t.services.development.title,
       description: t.services.development.description
@@ -18,11 +23,6 @@ const ServicesSection = () => {
       icon: <Settings className="w-8 h-8 text-primary" />,
       title: t.services.consulting.title,
       description: t.services.consulting.description
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-primary" />,
-      title: t.services.optimization.title,
-      description: t.services.optimization.description
     },
     {
       icon: <Users className="w-8 h-8 text-primary" />,

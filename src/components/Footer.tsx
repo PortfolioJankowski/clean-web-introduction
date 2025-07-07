@@ -14,9 +14,9 @@ const Footer = () => {
           <div>
             <div className="flex items-center mb-4">
               <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-lg">
-                JK
+                MJ
               </div>
-              <span className="ml-3 text-xl font-semibold">Jan Kowalski</span>
+              <span className="ml-3 text-xl font-semibold">Mateusz Jankowski</span>
             </div>
             <p className="text-gray-300 dark:text-gray-400">
               {t.footer.description}

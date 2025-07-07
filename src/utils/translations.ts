@@ -8,49 +8,49 @@ export const translations = {
       contact: 'Kontakt'
     },
     hero: {
-      available: 'Dostępny do współpracy',
+      available: 'Otwarty na współpracę',
       greeting: 'Cześć, jestem',
-      description: 'Full Stack Developer z pasją do tworzenia nowoczesnych rozwiązań technologicznych. Specjalizuję się w budowaniu skalowalnych aplikacji webowych i desktopowych.',
+      description: 'Inżynier oprogramowania z pasją do tworzenia nowoczesnych rozwiązań technologicznych. Specjalizuję się w budowaniu skalowalnych aplikacji webowych i desktopowych. Eksploatuję arkusze Excela do granic możliwości!',
       technologies: 'Technologie',
       education: 'Wykształcenie',
       educationItems: [
-        'Informatyka, Politechnika Warszawska (2018-2022)',
-        'Certyfikat Microsoft Azure Solutions Architect (2023)',
-        'Udemy - Advanced .NET Development (2022)'
+        'Nauki Polityczne, Szkoła Doktorska Uniwersytetu Śląskiego (2023-2027)',
+        'Machine Learning & Artificial Intelligence, WSB Merito (2024-2025)',
+        'Doradztwo Polityczne i Publiczne, Uniwersytet Śląski (2020-2023)',
+        'Prawo, Uniwersytet Śląski (2018-2023)'
       ]
     },
     product: {
-      badge: 'Nowy Produkt',
+      badge: 'NGOsik',
       title: 'Odkryj Mój Produkt',
-      description: 'Zaawansowana aplikacja desktopowa zbudowana z użyciem .NET i WinForms, zaprojektowana aby uprościć procesy biznesowe i zwiększyć produktywność.',
+      description: 'Zaawansowana aplikacja desktopowa zbudowana z użyciem .NET i WinForms, zaprojektowana aby uprościć zarządzanie organizacją pozarządową. Przestań martwić się o infrastrukturę IT, księgowych, prawników i zmieniaj świat od pierwszego dnia działalności!',
       benefitsTitle: 'Kluczowe korzyści',
       benefits: {
-        performance: 'Wysoka wydajność',
-        security: 'Bezpieczeństwo danych',
-        userFriendly: 'Łatwość użytkowania'
+        performance: 'Ewidencja członków organizacji',
+        security: 'Usystematyzowane zarządzanie projektami',
+        userFriendly: 'Wbudowany moduł raportowania'
       },
       targetAudienceTitle: 'Dla kogo?',
-      targetAudience: 'Idealne dla średnich i dużych przedsiębiorstw poszukujących kompleksowych rozwiązań do zarządzania procesami biznesowymi.',
-      learnMore: 'Dowiedz się więcej',
-      tryNow: 'Wypróbuj teraz'
+      targetAudience: 'Idealne dla nowych organizacji, które chcą zacząć realizacje swojej wizji już od pierwszego dnia!',
+      learnMore: 'Zapisz się na listę oczekujących',
     },
     services: {
       title: 'Moje Usługi',
       subtitle: 'Jak mogę Ci pomóc?',
+      implementation:{
+        title: 'Wdrożenie NGOsika',
+        description: 'Implementacja aplikacji w Twojej organizacji samorządowej!'
+      },
       development: {
         title: 'Rozwój Oprogramowania',
-        description: 'Tworzenie nowoczesnych aplikacji desktopowych i webowych z użyciem .NET, WinForms, React i najnowszych technologii.'
+        description: 'Tworzenie nowoczesnych aplikacji desktopowych oraz webowych.'
       },
       consulting: {
-        title: 'Konsultacje Techniczne',
-        description: 'Doradztwo w zakresie architektury systemów i wyboru optymalnych rozwiązań technologicznych.'
-      },
-      optimization: {
-        title: 'Optymalizacja Wydajności',
-        description: 'Analiza i optymalizacja wydajności aplikacji oraz infrastruktury chmurowej Azure.'
+        title: 'Spersonalizowane Programy Biznesowe',
+        description: 'Tworzenie narzędzi automatyzujących pracę w biurze (aplikacje Excel).'
       },
       training: {
-        title: 'Szkolenia VBA',
+        title: 'Szkolenia VBA i Excel',
         description: 'Kompleksowe szkolenia z VBA i automatyzacji procesów w Microsoft Office.'
       }
     },
@@ -75,10 +75,10 @@ export const translations = {
       }
     },
     footer: {
-      description: 'Full Stack Developer specjalizujący się w .NET, WinForms, React i Azure.',
+      description: 'Inżynier oprogramowania specjalizujący się w aplikacjach desktopowych oraz webowych.',
       quickLinks: 'Szybkie linki',
       followMe: 'Śledź mnie',
-      copyright: '© 2024 Jan Kowalski. Wszystkie prawa zastrzeżone.'
+      copyright: '© 2024 Mateusz Jankowski. Wszystkie prawa zastrzeżone.'
     }
   },
   en: {
@@ -89,52 +89,52 @@ export const translations = {
       contact: 'Contact'
     },
     hero: {
-      available: 'Available for collaboration',
-      greeting: "Hi, I'm",
-      description: 'Full Stack Developer passionate about creating modern technological solutions. I specialize in building scalable web and desktop applications.',
+      available: 'open for cooperation',
+      greeting: 'Hi, I\'m',
+      description: 'a software developer with a passion for creating cutting-edge technology solutions. I specialize in building scalable web and desktop applications. I exploit Excel sheets to the limit!',
       technologies: 'Technologies',
       education: 'Education',
       educationItems: [
-        'Computer Science, Warsaw University of Technology (2018-2022)',
-        'Microsoft Azure Solutions Architect Certificate (2023)',
-        'Udemy - Advanced .NET Development (2022)'
+      'Political Science, PhD School, University of Silesia (2023-2027)',
+      'Machine Learning & Artificial Intelligence, WSB Merito (2024-2025)',
+      'Political and Public Advocacy, University of Silesia (2020-2023)',
+      'Law, University of Silesia (2018-2023)'
       ]
     },
-    product: {
-      badge: 'New Product',
-      title: 'Discover My Product',
-      description: 'Advanced desktop application built with .NET and WinForms, designed to simplify business processes and increase productivity.',
-      benefitsTitle: 'Key Benefits',
-      benefits: {
-        performance: 'High Performance',
-        security: 'Data Security',
-        userFriendly: 'User Friendly'
-      },
-      targetAudienceTitle: 'Target Audience',
-      targetAudience: 'Perfect for medium and large enterprises looking for comprehensive business process management solutions.',
-      learnMore: 'Learn more',
-      tryNow: 'Try now'
+product: {
+    badge: 'NGOsik',
+    title: 'Discover My Product',
+    description: 'An advanced desktop application built using .NET and WinForms, designed to simplify the management of an NGO. Stop worrying about IT infrastructure, accountants, lawyers and change the world from day one!',
+    benefitsTitle: 'Key Benefits',
+    benefits: {
+    performance: 'Organization member record',
+    security: 'Structured project management',
+    userFriendly: 'Built-in reporting module'
+    },
+    targetAudienceTitle: 'For whom?',
+    targetAudience: 'Ideal for new organizations that want to start realizing their vision from day one!',
+    learnMore: 'Sign up for the waiting list',
     },
     services: {
       title: 'My Services',
       subtitle: 'How can I help you?',
+      implementation:{
+        title: 'NGOsik implementation',
+        description: 'Implementing management applications in your organization!'
+      },
       development: {
         title: 'Software Development',
-        description: 'Creating modern desktop and web applications using .NET, WinForms, React and latest technologies.'
-      },
+        description: 'Developing modern desktop and web applications.'
+            },
       consulting: {
-        title: 'Technical Consulting',
-        description: 'Consulting on system architecture and choosing optimal technological solutions.'
-      },
-      optimization: {
-        title: 'Performance Optimization',
-        description: 'Analysis and optimization of application performance and Azure cloud infrastructure.'
-      },
+        title: 'Personalized Business Programs',
+        description: 'Creating office automation tools (Excel applications).'
+              },
       training: {
-        title: 'VBA Training',
-        description: 'Comprehensive VBA training and Microsoft Office process automation.'
-      }
-    },
+        title: 'VBA and Excel Training',
+        description: 'Comprehensive training in VBA and process automation in Microsoft Office.'
+              }
+          },
     contact: {
       title: 'Contact me',
       subtitle: 'Have a question? Write to me!',
@@ -156,10 +156,10 @@ export const translations = {
       }
     },
     footer: {
-      description: 'Full Stack Developer specializing in .NET, WinForms, React and Azure.',
+      description: 'Software engineer specializing in desktop and web applications.',
       quickLinks: 'Quick Links',
       followMe: 'Follow Me',
-      copyright: '© 2024 Jan Kowalski. All rights reserved.'
+      copyright: '© 2024 Mateusz Jankowski. All rights reserved.'
     }
   }
 };

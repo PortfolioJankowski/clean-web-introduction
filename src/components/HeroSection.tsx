@@ -5,13 +5,14 @@ import { Github, Linkedin, Mail, Code } from 'lucide-react';
 import { Technology } from '@/types';
 import { useAppContext } from '@/contexts/AppContext';
 import { useTranslations } from '@/utils/translations';
+import { Navigate } from "react-router-dom";
 
 const HeroSection = () => {
   const { language } = useAppContext();
   const t = useTranslations(language);
 
   const technologies: Technology[] = [
-    { name: '.NET', icon: '🔷' },
+    { name: 'C# .NET', icon: '⚙️' },
     { name: 'WinForms', icon: '🖥️' },
     { name: 'React', icon: '⚛️' },
     { name: 'TypeScript', icon: '🔷' },
@@ -29,7 +30,7 @@ const HeroSection = () => {
               {t.hero.available}
             </Badge>
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-              {t.hero.greeting} <span className="text-primary">Jan Kowalski</span>
+              {t.hero.greeting} <span className="text-primary">Mateusz Jankowski</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
               {t.hero.description}
@@ -60,15 +61,11 @@ const HeroSection = () => {
 
             {/* Social Links */}
             <div className="flex space-x-4">
-              <Button variant="outline" size="sm" className="hover:bg-primary hover:text-white transition-colors border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300">
-                <Github className="w-4 h-4 mr-2" />
-                GitHub
-              </Button>
-              <Button variant="outline" size="sm" className="hover:bg-primary hover:text-white transition-colors border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300">
+              <Button variant="outline" size="sm" className="hover:bg-primary hover:text-white transition-colors border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300" onClick={() => window.open('https://www.linkedin.com/in/mat-jankowski/', '_blank') }>
                 <Linkedin className="w-4 h-4 mr-2" />
                 LinkedIn
               </Button>
-              <Button variant="outline" size="sm" className="hover:bg-primary hover:text-white transition-colors border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300">
+              <Button variant="outline" size="sm" className="hover:bg-primary hover:text-white transition-colors border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300" onClick={() => window.open('mailto:jan@example.com')}>
                 <Mail className="w-4 h-4 mr-2" />
                 jan@example.com
               </Button>
@@ -79,8 +76,8 @@ const HeroSection = () => {
             <div className="relative">
               <div className="w-80 h-96 bg-gradient-to-br from-primary to-blue-600 rounded-lg p-2 shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face"
-                  alt="Jan Kowalski"
+                  src="../../public/zdj.jpg"
+                  alt="Mateusz Jankowski"
                   className="w-full h-full rounded-lg object-cover"
                 />
               </div>

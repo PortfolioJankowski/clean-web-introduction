@@ -12,11 +12,40 @@ const ContactSection = () => {
   const { language } = useAppContext();
   const t = useTranslations(language);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted');
+      const name = (document.getElementById('name') as HTMLInputElement).value;
+      const email = (document.getElementById('email') as HTMLInputElement).value;
+      const subject = (document.getElementById('subject') as HTMLInputElement).value;
+      const message = (document.getElementById('message') as HTMLTextAreaElement).value;
+
+  const content = `
+    **Nowa wiadomość z formularza kontaktowego** 📩
+    👤 Imię: ${name}
+    ✉️ Email: ${email}
+    📌 Temat: ${subject}
+    💬 Wiadomość:
+    ${message}
+      `;
+
+  await fetch('https://discord.com/api/webhooks/1391824408854663188/xJYlWRe_ppWPX-G4SY77HNTUD1vBKsS-5vlvV2nKRvA1Spbim9i-GNXy_5Ad7_rwZBQn', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      content,
+    }),
+  });
+     (document.getElementById('name') as HTMLInputElement).value = '';
+      (document.getElementById('email') as HTMLInputElement).value = '';
+      (document.getElementById('subject') as HTMLInputElement).value = '';
+       (document.getElementById('message') as HTMLTextAreaElement).value = '';
+
+  alert('Wiadomość wysłana');
   };
+
+  
 
   return (
     <section id="kontakt" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
@@ -73,15 +102,15 @@ const ContactSection = () => {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-primary" />
-                  <span className="text-gray-700 dark:text-gray-300">jan.kowalski@example.com</span>
+                  <span className="text-gray-700 dark:text-gray-300">mat.jankowski99@gmail.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-primary" />
-                  <span className="text-gray-700 dark:text-gray-300">+48 123 456 789</span>
+                  <span className="text-gray-700 dark:text-gray-300">+48 796 113 748</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-primary" />
-                  <span className="text-gray-700 dark:text-gray-300">Warszawa, Polska</span>
+                  <span className="text-gray-700 dark:text-gray-300">Katowice, Polska</span>
                 </div>
               </div>
             </div>

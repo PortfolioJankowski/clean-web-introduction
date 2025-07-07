@@ -35,9 +35,9 @@ const Header = ({ activeSection, onNavigate }: HeaderProps) => {
           {/* Logo */}
           <div className="flex items-center">
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-lg">
-              JK
+              MJ
             </div>
-            <span className="ml-3 text-xl font-semibold text-gray-900 dark:text-white">Jan Kowalski</span>
+            <span className="ml-3 text-xl font-semibold text-gray-900 dark:text-white">Mateusz Jankowski</span>
           </div>
 
           {/* Desktop Navigation */}
